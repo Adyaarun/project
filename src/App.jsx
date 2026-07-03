@@ -1,46 +1,38 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
 import AdminComplaintList from "./components/AdminComplaintList";
 import StatusUpdateScreen from "./components/StatusUpdateScreen";
-
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import NavBar from './Components/NavBar'
-import { Route, Routes } from 'react-router-dom'
-import Login from './components/Login'
-import Register from './components/Register'
-import AddComplaint from './Components/AddComplaint'
-import ComplainList from './Components/ComplainList'
-import StudentDashboard from './Components/StudentDashboard'
-import AdminDashboard from './Components/AdminDashboard'
-
+import NavBar from './Components/NavBar';
+import Login from './components/Login';
+import Register from './components/Register';
+import AddComplaint from './Components/AddComplaint';
+import ComplainList from './Components/ComplainList';
+import StudentDashboard from './Components/StudentDashboard';
+import AdminDashboard from './Components/AdminDashboard';
+import './App.css';
 
 function App() {
   return (
-
     <BrowserRouter>
+      <NavBar />
       <Routes>
-        <Route path="/" element={<AdminComplaintList />} />
+        {/* Admin Routes */}
+        <Route path="/admin-complaints" element={<AdminComplaintList />} />
         <Route path="/status-update" element={<StatusUpdateScreen />} />
-
-    <>
-     
-      <Routes>
-        <Route path='/'element={<Login/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path = "/" element={<h1>Welcome to the Campus Complaint Management System</h1>} />
-        <Route path = "/addcomplaint" element={<AddComplaint />} />
-        <Route path = "/complaintlist" element={<ComplainList />} />
-        <Route path="/StudentDashboard" element={<StudentDashboard />} />     
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
 
+        {/* Auth & Student Routes */}
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/addcomplaint" element={<AddComplaint />} />
+        <Route path="/complaintlist" element={<ComplainList />} />
+        <Route path="/StudentDashboard" element={<StudentDashboard />} />     
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+
