@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from 'react';
 import AdminComplaintList from "./components/AdminComplaintList";
 import StatusUpdateScreen from "./components/StatusUpdateScreen";
-import NavBar from './Components/NavBar';
-import Login from './components/Login';
-import Register from './components/Register';
-import AddComplaint from './Components/AddComplaint';
-import ComplainList from './Components/ComplainList';
-import StudentDashboard from './Components/StudentDashboard';
-import AdminDashboard from './Components/AdminDashboard';
-import './App.css';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
+import NavBar from './Components/NavBar'
+import { Route, Routes } from 'react-router-dom'
+import Login from './components/Login'
+import Register from './components/Register'
+import AddComplaint from './Components/AddComplaint'
+import ComplainList from './Components/ComplainList'
+import StudentDashboard from './Components/StudentDashboard'
+import AdminDashboard from './Components/AdminDashboard'
 
 function App() {
   return (
