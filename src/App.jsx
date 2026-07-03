@@ -18,7 +18,7 @@ function App() {
         <Routes>
         <Route path="/" element={<AdminComplaintList />} />
         <Route path="/status-update" element={<StatusUpdateScreen />} />
-         <>
+         
      
       <Routes>
         <Route path='/'element={<Login/>}/>
@@ -32,7 +32,7 @@ function App() {
 
       </Routes>    
     </BrowserRouter>
-          </>
+          
   );
 }
 
