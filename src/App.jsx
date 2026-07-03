@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminComplaintList from "./components/AdminComplaintList";
 import StatusUpdateScreen from "./components/StatusUpdateScreen";
-=======
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
