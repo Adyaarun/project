@@ -15,20 +15,22 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        {/* Admin Routes */}
-        <Route path="/admin-complaints" element={<AdminComplaintList />} />
+        <Routes>
+        <Route path="/" element={<AdminComplaintList />} />
         <Route path="/status-update" element={<StatusUpdateScreen />} />
+         <>
+     
+      <Routes>
+        <Route path='/'element={<Login/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path = "/" element={<h1>Welcome to the Campus Complaint Management System</h1>} />
+        <Route path = "/addcomplaint" element={<AddComplaint />} />
+        <Route path = "/complaintlist" element={<ComplainList />} />
+        <Route path="/StudentDashboard" element={<StudentDashboard />} />     
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
 
-        {/* Auth & Student Routes */}
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/addcomplaint" element={<AddComplaint />} />
-        <Route path="/complaintlist" element={<ComplainList />} />
-        <Route path="/StudentDashboard" element={<StudentDashboard />} />     
-      </Routes>
+      </Routes>    
     </BrowserRouter>
   );
 }
