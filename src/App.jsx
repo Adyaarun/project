@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import AdminComplaintList from "./components/AdminComplaintList";
 import StatusUpdateScreen from "./components/StatusUpdateScreen";
 import { useState } from 'react'
